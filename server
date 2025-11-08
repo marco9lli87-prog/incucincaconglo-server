@@ -1,0 +1,7 @@
+
+git init
+git add .
+git commit -m "In Cucina con Glò - MVP + Admin"
+git branch -M main
+git remote add origin https://github.com/marco9lli87/incucinaconglo-server.git
+git push -u origin main
