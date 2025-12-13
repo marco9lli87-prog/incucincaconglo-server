@@ -1,8 +1,8 @@
 export default function Home () {
   return  (
-    <div style={{ padding: '20px', color: 'white' }}>
-      <h1>In Cucina con Glò</h1>
-        <p>Se vedi questo testo, React funziona</p>
+    <div style={{ color: 'red' padding'40px' }}>
+      <h1>Incucina con Glò</h1>
+        <p>Se vedi va</p>
     </div>
     );
 }
