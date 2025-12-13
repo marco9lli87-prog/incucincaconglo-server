@@ -8,38 +8,34 @@ const supabase = createClient(
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    async function loadProducts() {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("active", true);
+
+      if (error) {
+        console.error("Errore prodotti:", error);
+      } else {
+        setProducts(data);
+      }
+    }
+
     loadProducts();
   }, []);
 
-  async function loadProducts() {
-    const { data, error } = await supabase
-      .from("products")
-      .select("*")
-      .eq("active", true);
-
-    if (error) {
-      console.error("Errore Supabase:", error);
-    } else {
-      setProducts(data);
-    }
-    setLoading(false);
-  }
-
-  if (loading) return <p>Caricamento prodotti...</p>;
-
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto" }}>
+    <div>
       <h1>In Cucina con Glò</h1>
 
-      {products.length === 0 && <p>Nessun prodotto disponibile</p>}
+      {products.length === 0 && <p>Nessun prodotto trovato</p>}
 
       <ul>
         {products.map((p) => (
-          <li key={p.id} style={{ marginBottom: 12 }}>
-            <strong>{p.name}</strong> – {p.price}€ / {p.unit}
+          <li key={p.id}>
+            <strong>{p.name}</strong> – {p.price} € / {p.unit}
           </li>
         ))}
       </ul>
