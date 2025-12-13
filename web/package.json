@@ -1,1 +1,1 @@
-{"name":"incucina","scripts":{"build":"echo build"}}
+{"name":"incucina","scripts":{"build":"vite build"}}
