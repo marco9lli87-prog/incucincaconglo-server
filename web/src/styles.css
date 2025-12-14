@@ -1,54 +1,6 @@
 body {
   margin: 0;
-  background: #0b0b0b;
-  color: #f5d76e;
-  font-family: system-ui, sans-serif;
-}
-
-.container {
-  padding: 20px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 18px;
-}
-
-.card {
-  background: #111;
-  padding: 12px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.price {
-  color: #d4af37;
-  font-weight: bold;
-}
-
-button {
-  background: #d4af37;
-  color: #000;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.cart {
-  margin-top: 30px;
-  border-top: 1px solid #333;
-  padding-top: 15px;
+  font-family: system-ui, Arial, sans-serif;
+  background: white;
+  color: black;
 }
